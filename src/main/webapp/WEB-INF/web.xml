@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>test-web-app</display-name>
+
+	<servlet>
+			<servlet-name>TestServlet</servlet-name>
+			<servlet-class>com.servlet.test.TestServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+			<servlet-name>TestServlet</servlet-name>
+			<url-pattern>/test</url-pattern>	
+	</servlet-mapping>
+	
+	<!-- SECOND SERVLET CONFIGURATION -->
+	<servlet>
+		<servlet-name>SecondServlet</servlet-name>
+		<servlet-class>com.servlet.test.SecondServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>SecondServlet</servlet-name>
+		<url-pattern>/second</url-pattern>
+	</servlet-mapping>
+	
+	<!-- END OF SECOND SERVLET CONFIGURATION -->
+	
+	<!-- THIRD SERVLET CONFIGURATION -->
+	<servlet>
+		<servlet-name>ThirdServlet</servlet-name>
+		<servlet-class>com.servlet.test.ThirdServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ThirdServlet</servlet-name>
+		<url-pattern>/third</url-pattern>
+	</servlet-mapping>
+	
+	<!-- END OF THIRD SERVLET CONFIGURATION -->
+	
+	<!-- LOGIN SERVLET CONFIGURATION -->
+	<servlet>
+		<servlet-name>loginServlet</servlet-name>
+		<servlet-class>com.servlet.test.LoginServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>loginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	
+	<!-- END OF LOGIN SERVLET CONFIGURATION -->
+	
+	
+	
+	
+	<session-config>
+        <session-timeout>1</session-timeout>
+	</session-config>
+	
+</web-app>
